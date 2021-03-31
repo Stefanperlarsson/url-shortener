@@ -4,7 +4,7 @@
     <h1> URL Shortener</h1>
     <div class="card">
         <div class="card-header">
-            <form method="POST" action="{{ route('index.post') }}">
+            <form method="POST" action="{{ route('index.store') }}">
                 @csrf
                 <div class="input-group mb-3">
                     <input type="text" name="link" class="form-control" placeholder="URLを入力してください" aria-label="Recipient's username" aria-describedby="basic-addon2">
@@ -34,7 +34,7 @@
                     @foreach($links as $link)
                         <tr>
                             <td>{{ $link->id }}</td>
-                            <td><a href="{{ route('shorten.link', $link->code) }}" target="_blank">{{ route('shorten.link', $link->code) }}</a></td>
+                            <td><a href="{{ route('index.link', $link->code) }}" target="_blank">{{ route('index.link', $link->code) }}</a></td>
                             <td>{{ $link->link }}</td>
                         </tr>
                     @endforeach

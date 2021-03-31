@@ -19,5 +19,6 @@ Route::get('/', function () {
 });
 */
 Route::get('/', 'App\Http\Controllers\IndexController@index');
-Route::post('/', 'App\Http\Controllers\IndexController@post')->name('index.post');
+Route::post('/', 'App\Http\Controllers\IndexController@store')->name('index.store');
+Route::get('{code}', 'App\Http\Controllers\IndexController@link')->name('index.link');
 
