@@ -3,16 +3,16 @@
 namespace App\Http\Controllers;
 
 use App\Models\ShortLink;
-use Illuminate\Contracts\View\Factory;
+use Illuminate\View\View;
 
 class IndexController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
-     * @return Factory
+     * @return View
      */
-    public function index(): Factory
+    public function index(): View
     {
         $links = ShortLink::latest()->get();
 
