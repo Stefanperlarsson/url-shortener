@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Models\ShortLink;
 
 class IndexController extends Controller
 {
@@ -13,9 +13,7 @@ class IndexController extends Controller
      */
     public function index()
     {
-        //$links = ShortLink::latest()->get();
-
-        $links = [];
+        $links = ShortLink::latest()->get();
 
         return view('index', compact('links'));
     }
