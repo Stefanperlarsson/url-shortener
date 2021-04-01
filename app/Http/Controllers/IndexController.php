@@ -37,7 +37,7 @@ class IndexController extends Controller
 
         ShortLink::create([
             'link' => $request->link,
-            'code' => Str::random(5),
+            'code' => Str::random(config('url-shortener.size')),
         ]);
 
         return redirect('/')
