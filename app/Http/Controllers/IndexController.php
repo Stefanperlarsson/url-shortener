@@ -31,9 +31,13 @@ class IndexController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'link' => 'required'
-        ]);
+        $request->validate(
+            ['link' => 'required|url'],
+            [
+                'required' => 'URLを入力してください',
+                'url' => 'http://url.comのようなURLを入力してください'
+            ]
+        );
 
         ShortLink::create([
             'link' => $request->link,

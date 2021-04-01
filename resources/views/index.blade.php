@@ -15,14 +15,20 @@
             </form>
         </div>
         <div class="card-body">
-
             @if (Session::has('success'))
                 <div class="alert alert-success">
                     <p>{{ Session::get('success') }}</p>
                 </div>
             @endif
+            @if($errors->any())
+                @foreach($errors->getMessages() as $error)
+                    <div class="alert alert-danger">
+                        <p>{{ $error[0] }}</p>
+                    </div>
+                @endforeach
+            @endif
 
-            <table class="table table-bordered table-sm">
+                <table class="table table-bordered table-sm">
                 <thead>
                 <tr>
                     <th>ID</th>
