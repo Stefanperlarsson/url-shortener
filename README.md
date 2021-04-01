@@ -4,7 +4,7 @@
 
 LaravelやBoostrapを使用し、URLを短くするためのツールを作っていました。＿この＿リンクを開いて、やってみてください！
 
-## 自分の環境を立ちたい方
+## 自分の環境で立ちたい方
 
 - Gitのリポシトリーのコードをダウンロードする　ー　```git checkout git@github.com:Stefanperlarsson/url-shortener.git```
 - Laravelのパッケージをインストールする　ー　``` composer install ```
